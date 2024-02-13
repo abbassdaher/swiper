@@ -8,12 +8,13 @@ import 'swiper/css/pagination';
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-function SwiperCarousel({children, data}) {
-    const child = data.map((el)=>{
-        return React.cloneElement(children, {
+function SwiperCarousel({ children, data }) {
+    const child = data.map((el) => {return(<SwiperSlide>{React.cloneElement(children, {
             item: el,
             key: el.id,
-        })
+        })}</SwiperSlide>)
+        
+
     })
     return (
 
@@ -21,15 +22,13 @@ function SwiperCarousel({children, data}) {
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
-                pagination={{ clickable: true }}
-
+                slidesPerView={4}
+                // navigation
+                // onSlideChange={() => console.log("slide change")}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // pagination={{ clickable: true }}
             >
-                <SwiperSlide>{child}</SwiperSlide>
-
+                {child}
             </Swiper>
         </div>
 

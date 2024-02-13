@@ -9,10 +9,14 @@ function App() {
     { id: "2", name: "nadine", email: "nadine@nadine", age: "25" },
     { id: "3", name: "houssen", email: "houssen@houssen", age: "23" },
     { id: "4", name: "mahdi", email: "mahdi@mahdi", age: "18" },
+    { id: "1", name: "abbass", email: "abbass@abbass", age: "30" },
+    { id: "2", name: "nadine", email: "nadine@nadine", age: "25" },
+    { id: "3", name: "houssen", email: "houssen@houssen", age: "23" },
+    { id: "4", name: "mahdi", email: "mahdi@mahdi", age: "18" },
   ];
   return (
     <div className="App">
-    <SwiperCarousel data={userData} ><ShapeOne/></SwiperCarousel>
+    <SwiperCarousel data={userData} ><ShapeOne/></SwiperCarousel><br/>
     <SwiperCarousel data={userData} ><ShapeTwo/></SwiperCarousel>
     </div>
   );

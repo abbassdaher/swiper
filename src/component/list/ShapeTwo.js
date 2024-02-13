@@ -7,7 +7,6 @@ function ShapeTwo({ item }) {
       <div className=" item ShapeTwo">
         <ul>
           <li>{item.name}</li>
-          <li>{item.email}</li>
           <li>{item.age}</li>
         </ul>
       </div>
