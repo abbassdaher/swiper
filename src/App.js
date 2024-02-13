@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SwiperCarousel from "./component/SwiperCarousel/SwiperCarousel"
+import ShapeOne from "./component/list/ShapeOne"
+import ShapeTwo from "./component/list/ShapeTwo"
 
 function App() {
+  const userData = [
+    { id: "1", name: "abbass", email: "abbass@abbass", age: "30" },
+    { id: "2", name: "nadine", email: "nadine@nadine", age: "25" },
+    { id: "3", name: "houssen", email: "houssen@houssen", age: "23" },
+    { id: "4", name: "mahdi", email: "mahdi@mahdi", age: "18" },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <SwiperCarousel data={userData} ><ShapeOne/></SwiperCarousel>
+    <SwiperCarousel data={userData} ><ShapeTwo/></SwiperCarousel>
     </div>
   );
 }

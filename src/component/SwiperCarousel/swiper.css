@@ -1,0 +1,7 @@
+.swiper-container {
+  width: 100%;
+}
+.swiper-slide {
+  background-color: red;
+  height: 200px;
+}
